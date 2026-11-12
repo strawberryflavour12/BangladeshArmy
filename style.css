@@ -1,0 +1,539 @@
+
+/* =========================
+   1. BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f5f2;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   2. HEADER
+========================= */
+
+header {
+    width: 100%;
+    padding: 20px 7%;
+    background-color: #172d20;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    transition: 0.3s;
+}
+
+header.scrolled {
+    background-color: #0c1c12;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+}
+
+.logo h2 {
+    color: #e3c36a;
+    font-size: 22px;
+}
+
+.logo p {
+    color: white;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #e3c36a;
+}
+
+.menu-toggle {
+    display: none;
+    background: #c6a64b;
+    border: none;
+    padding: 8px 13px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   3. HERO SECTION
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("https://images.unsplash.com/photo-1504870712357-65ea720d6078");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    color: #e3c36a;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   4. BUTTON
+========================= */
+
+.btn {
+    display: inline-block;
+    background-color: #c6a64b;
+    color: #172d20;
+
+    padding: 13px 28px;
+    border: none;
+    border-radius: 4px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: white;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   5. COMMON SECTIONS
+========================= */
+
+.section {
+    padding: 85px 8%;
+}
+
+.section-title {
+    text-align: center;
+    color: #203d2b;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   6. ABOUT SECTION
+========================= */
+
+.about {
+    background-color: white;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #203d2b;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.about-text .btn {
+    margin-top: 10px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   7. ACTIVITIES
+========================= */
+
+.activities {
+    background-color: #e9eee9;
+}
+
+.activity-container {
+    display: flex;
+    gap: 25px;
+}
+
+.activity-card {
+    flex: 1;
+    background-color: white;
+    padding: 35px 25px;
+
+    border-bottom: 4px solid #c6a64b;
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.activity-card h2 {
+    color: #203d2b;
+    margin-bottom: 18px;
+}
+
+.activity-card p {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   8. NEWS SECTION
+========================= */
+
+.news {
+    background-color: white;
+}
+
+.news-container {
+    display: flex;
+    gap: 25px;
+}
+
+.news-card {
+    flex: 1;
+    background-color: #f1f3f1;
+    padding: 30px;
+    border-radius: 6px;
+
+    transition: 0.3s;
+}
+
+.news-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.news-card h3 {
+    color: #203d2b;
+    margin-bottom: 15px;
+}
+
+.news-card p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.news-card a {
+    color: #99751f;
+    font-weight: bold;
+}
+
+
+/* =========================
+   9. GALLERY
+========================= */
+
+.gallery {
+    background-color: #e9eee9;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 20px;
+}
+
+.gallery-container img {
+    width: 33.33%;
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 7px;
+
+    transition: 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   10. CONTACT SECTION
+========================= */
+
+.contact {
+    background-color: white;
+}
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #203d2b;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+#contactForm {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    border-color: #203d2b;
+}
+
+#contactForm textarea {
+    height: 130px;
+    resize: vertical;
+}
+
+#formMessage {
+    font-weight: bold;
+}
+
+
+/* =========================
+   11. FOOTER
+========================= */
+
+footer {
+    background-color: #172d20;
+    color: white;
+
+    text-align: center;
+    padding: 40px 15px;
+}
+
+footer h2 {
+    color: #e3c36a;
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin: 12px;
+    font-size: 13px;
+}
+
+.disclaimer {
+    color: #bdbdbd;
+}
+
+
+/* =========================
+   12. BACK TO TOP BUTTON
+========================= */
+
+#topButton {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #c6a64b;
+    color: #172d20;
+
+    font-size: 25px;
+    cursor: pointer;
+
+    display: none;
+    z-index: 999;
+}
+
+#topButton:hover {
+    background-color: #172d20;
+    color: white;
+}
+
+
+/* =========================
+   13. SCROLL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   14. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-wrap: wrap;
+        padding: 18px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0 5px;
+        gap: 20px;
+    }
+
+    .hero {
+        min-height: 480px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content h2 {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .about-content,
+    .activity-container,
+    .news-container,
+    .gallery-container,
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .about-image img {
+        height: 250px;
+    }
+
+    .gallery-container img {
+        width: 100%;
+    }
+
+    .section {
+        padding: 60px 6%;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+}
